@@ -15,7 +15,7 @@ Higher-level programming with **Python**
 Requirements
 
 ## Zen
-```python
+```
 The Zen of Python, by Tim Peters
 
 Beautiful is better than ugly.
