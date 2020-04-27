@@ -1,2 +1,3 @@
 #!bin/bash
-python3 -m py_compile -b $PYFILE
+python3 $PYFILE
+mv $PYFIE ${PYFILE}'c'
