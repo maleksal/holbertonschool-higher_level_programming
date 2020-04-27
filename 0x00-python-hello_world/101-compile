@@ -1,3 +1,2 @@
-#!bin/bash
-python -m py_compile $PYFILE
-mv __pycache__/*.pyc ./$PYFIE ${PYFILE}'c'
+#!/bin/bash
+python3 -m compileall -b $PYFILE
