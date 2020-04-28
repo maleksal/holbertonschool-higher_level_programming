@@ -2,8 +2,8 @@
 
 
 /**
- * check_cycle - checks if a singly linked list
- * has a cycle in it using floyd algo
+ * check_cycle - checks if a singly linked list has a cycle in it,
+ * using Floyd's cycle detection algorithm.
  *
  * @list: points to singly linked list
  * Return: 0 if there is no cycle, 1 if there is a cycle
