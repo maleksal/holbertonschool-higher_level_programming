@@ -18,7 +18,6 @@ def conditions(last_digit):
 
 
 def last_digit(num):
-    
     last_d = int(str(number)[-1])
 
     if num < 0:
@@ -31,4 +30,4 @@ number = random.randint(-10000, 10000)
 last_d = last_digit(number)
 output = conditions(last_d)
 
-print("Last digit of {} is {} {}".format(number, last_d , output))
+print("Last digit of {} is {} {}".format(number, last_d, output))
