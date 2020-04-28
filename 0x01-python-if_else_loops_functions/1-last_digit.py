@@ -18,12 +18,11 @@ def conditions(last_digit):
 
 
 def last_digit(num):
-    last_d = num % 10
 
     if num < 0:
-        return -last_d
+        return num % -10
 
-    return last_d
+    return num % 10
 
 
 number = random.randint(-10000, 10000)
