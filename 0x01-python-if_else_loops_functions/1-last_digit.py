@@ -8,11 +8,11 @@ def conditions(last_digit):
     if last_digit < 6 and last_digit != 0:
         result += "and is less than 6 and not 0"
 
-    elif last_digit == 0:
-        result += "and is 0"
+    elif last_digit > 5:
+        result += "and is greater than 5"
 
     else:
-        result += "and is greater than 5"
+        result += "and is 0"
 
     return result
 
