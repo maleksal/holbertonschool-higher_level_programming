@@ -2,4 +2,11 @@
 
 
 def uppercase(str):
-    print("".join(chr(ord(i) - 32) for i in str))
+    def convert(c):
+        if 97 <= ord(c) <= 122:
+            return chr(ord(c) - 32)
+        return c
+
+    for i in str:
+            print("{}".format(convert(i)), end="")
+    print('\n')
