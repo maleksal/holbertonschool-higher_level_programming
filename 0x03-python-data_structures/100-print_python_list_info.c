@@ -1,4 +1,5 @@
 #include <Python.h>
+#include <stdio.h>
 
 void print_python_list_info(PyObject *p)
 {
@@ -9,7 +10,7 @@ void print_python_list_info(PyObject *p)
 	printf("[*] Size of the Python List = %lu\n", length);
 	printf("[*] Allocated = %lu\n", ((PyVarObject *)(p))->allocated);
 
-	for ( ; i < size; i++)
+	for ( ; i < length; i++)
 	{
 		obj = PyList_GetItem(p, i);
 		printf("Element %lu: %s\n", i, ((PyObject *)(p))->ob_type)
