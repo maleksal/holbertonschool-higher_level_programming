@@ -2,4 +2,4 @@
 
 
 def no_c(my_string):
-    return my_string.replace('c', '').replace('C', '')
+    return "".join([i for i in my_string if i != 'c' if i != 'C'])
