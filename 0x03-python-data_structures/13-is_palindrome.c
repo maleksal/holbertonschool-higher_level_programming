@@ -19,10 +19,7 @@ int is_palindrome(listint_t **head)
 	listint_t *orign = *head;
 	listint_t *lenPtr = *head;
 
-	if (!head || *head == NULL)
-		return (1);
-
-	if (listint_len(lenPtr) == 1)
+	if (!head || *head == NULL || listint_len(lenPtr) == 1)
 		return (1);
 
 	while (x1Ptr && x2Ptr->next)
