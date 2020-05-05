@@ -8,6 +8,7 @@
 
 
 listint_t *reverse_listint(listint_t **head);
+size_t listint_len(const listint_t *h);
 
 int is_palindrome(listint_t **head)
 {
@@ -16,8 +17,12 @@ int is_palindrome(listint_t **head)
 
 	listint_t *mid_list;
 	listint_t *orign = *head;
+	listint_t *lenPtr = *head;
 
 	if (!head || *head == NULL)
+		return (0);
+
+	if (listint_len(lenPtr) <= 1)
 		return (0);
 
 	while (x1Ptr && x2Ptr->next)
@@ -83,4 +88,22 @@ listint_t *reverse_listint(listint_t **head)
 	}
 	*head = follower;
 	return (*head);
+}
+
+/**
+  * listint_len - get length of linked list
+  * @h: pointer to a user defined data type
+  * Return: int
+  */
+
+size_t listint_len(const listint_t *h)
+{
+	int len = 0;
+
+	while (h != NULL)
+	{
+		h = h->next;
+		len++;
+	}
+	return (len);
 }
