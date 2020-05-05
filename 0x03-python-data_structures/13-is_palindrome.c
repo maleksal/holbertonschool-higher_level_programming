@@ -18,7 +18,7 @@ int is_palindrome(listint_t **head)
 	listint_t *orign = *head;
 
 	if (!head || *head == NULL)
-		return (-1);
+		return (0);
 
 	while (x1Ptr && x2Ptr->next)
 	{
@@ -45,7 +45,7 @@ int is_palindrome(listint_t **head)
 	while (orign)
 	{
 		if (orign->n != mid_list->n)
-			return (-1);
+			return (0);
 		orign = orign->next;
 		mid_list = mid_list->next;
 	}
