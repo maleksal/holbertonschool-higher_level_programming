@@ -9,3 +9,5 @@ def complex_delete(a_dictionary, value):
 
     for key in l_keys:
         del a_dictionary[key]
+
+    return a_dictionary
