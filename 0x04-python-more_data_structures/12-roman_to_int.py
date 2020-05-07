@@ -12,7 +12,7 @@ def roman_to_int(roman_string):
     for letter, index in zip(roman_string, range(len(roman_string))):
 
         prev_letter = roman_string[index - 1]
-        if roman[letter] > roman[prev_letter]:
+        if index != 0 and roman[letter] > roman[prev_letter]:
                 numeric += roman[letter] - 2 * roman[prev_letter]
         else:
             numeric += roman[letter]
