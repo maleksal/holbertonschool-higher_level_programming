@@ -2,7 +2,7 @@
 
 
 def multiply_by_2(a_dictionary):
-
+    new_dic = dict()
     for key, value in a_dictionary.items():
         a_dictionary[key] = value * 2
-    return a_dictionary
+    return new_dic
