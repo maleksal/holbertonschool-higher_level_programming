@@ -115,7 +115,7 @@ class Square:
         template = ""
 
         if self.__size == 0:
-            print()
+            template += "\n"
 
         else:
             template += "\n" * self.__position[1]
