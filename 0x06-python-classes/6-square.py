@@ -24,7 +24,7 @@ class Square:
         '''
 
         self.size = size
-        self.__position = position
+        self.position = position
 
     @property
     def size(self):
@@ -76,7 +76,7 @@ class Square:
 
         '''
 
-        if type(position) != tuple or len(tuple) != 2\
+        if type(position) != tuple or len(position) != 2\
                 or type(position[0]) != int\
                 or type(position[1]) != int\
                 or position[0] < 0 or position[1] < 0:
