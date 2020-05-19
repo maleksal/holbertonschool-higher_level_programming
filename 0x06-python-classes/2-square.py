@@ -17,7 +17,7 @@ class Square:
         Constructor of the Square class
 
         Args:
-            size (int): The size of square
+            __size (int): The size of square
 
         '''
 
