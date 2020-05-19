@@ -42,7 +42,7 @@ class Square:
 
         '''
 
-        if type(size) != int:
+        if not type(size) is int:
             raise TypeError("size must be an intege")
 
         if size < 0:
