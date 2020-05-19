@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
+"""Square module"""
 
 class Square:
     ''' a square class '''
-    def __init__(self):
-        pass
+    pass
