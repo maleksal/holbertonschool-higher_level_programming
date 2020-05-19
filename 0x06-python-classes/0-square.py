@@ -2,6 +2,7 @@
 
 """Square module"""
 
+
 class Square:
     ''' a square class '''
     pass
