@@ -123,4 +123,4 @@ class Square:
                 template += " " * self.__position[0]
                 template += ("#" * self.__size) + '\n'
 
-        return template
+        return template[::-1]
