@@ -118,9 +118,13 @@ class Square:
             template += "\n"
 
         else:
-            template += "\n" * self.__position[1]
+            for i in range(self.__position[1]):
+                template += "\n"
             for i in range(0, self.__size):
-                template += " " * self.__position[0]
-                template += ("#" * self.__size) + '\n'
+                for d in range(self.__position[0]):
+                    template += ' '
+                for e in range(self.__size):
+                    template += "#"
+                template += '\n'
 
         return template[::-1]
