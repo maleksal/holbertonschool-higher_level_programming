@@ -8,7 +8,7 @@ class Square:
     Square class
 
     Atributes:
-        size (int): The size of a square is crucial for a square
+        __size (int): The size of a square is crucial for a square
 
     '''
 
@@ -17,7 +17,7 @@ class Square:
         Constructor of the Square class
 
         Args:
-            __size (int): The size of square
+            size (int): The size of square
 
         '''
 
