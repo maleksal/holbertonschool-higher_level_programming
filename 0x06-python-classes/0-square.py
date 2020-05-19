@@ -2,5 +2,6 @@
 
 
 class Square:
+    ''' a square class '''
     def __init__(self):
         pass
