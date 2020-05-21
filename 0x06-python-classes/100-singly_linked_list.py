@@ -99,7 +99,9 @@ class SinglyLinkedList(object):
         pointer = self.__head
 
         while pointer:
-            data_holder += '{:d}\n'.format(pointer.data)
+            data_holder += str(pointer.data)
+            if pointer.next_node:
+                data_holder += '\n'
             pointer = pointer.next_node
 
         return data_holder
