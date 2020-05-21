@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+
+"""Single linked list module"""
+
 
 class Node(object):
     '''
