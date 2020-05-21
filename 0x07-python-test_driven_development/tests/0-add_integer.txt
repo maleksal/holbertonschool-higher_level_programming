@@ -1,0 +1,46 @@
+The ``add_integer`` module
+====================================
+
+Using ``add_integer``
+------------------------------------
+
+Import add_integer from 0-add_integer
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Case 1 - simple calculation, sumplied with valid parameters
+
+    >>> add_integer(1, 2)
+    3
+
+Case 1.5 - simple calculation, integer and float
+
+    >>> add_integer(1, 2.5)
+    3
+
+case 2 - parameter a wil be suplied a string
+    
+    >>> add_integer("hello", 2)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+case 3 - parameter b will be suplied a string
+    >>> add_integer(1, "hello")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+case 4 - suply None to parameter a
+    
+    >>> add_integer(None, 2)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+case 5 - suply None to parameter b
+    
+    >>> add_integer(1, None)
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
