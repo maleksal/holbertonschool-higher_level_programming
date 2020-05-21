@@ -1,0 +1,48 @@
+The ``Say my name`` module
+====================================
+
+Using ``say_my_name``
+------------------------------------
+
+Import say_my_name function from 3-say_my_name
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Case 1 - suply valid parameters
+
+    >>> say_my_name("Jhon", "Doe")
+    My name is Jhon Doe
+
+Case 2 - parameter first_name contains a non valid type 
+
+    >>> say_my_name(1, "Doe")
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+    >>> say_my_name(True, "Doe")
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+    >>> say_my_name(None, "Doe")
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+Case 3 - parameter last_name contains a non valid type 
+
+    >>> say_my_name("Jhon", 1)
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
+
+    >>> say_my_name("Jhon", True)
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
+
+    >>> say_my_name("Jhon", None)
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
