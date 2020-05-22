@@ -1,0 +1,48 @@
+The ``text_indentation`` module
+===============================================================================
+
+Using ``text_indentation``
+-------------------------------------------------------------------------------
+
+Import text_indentation from 5-text_indentation
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Case 1 - raise an exception if 'text' is not a string
+
+    >>> text_indentation(98)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+case 2 - tokenize with multiple delimiters
+    
+    >>> text_indentation("Hello? my name is. Malek: yoo")
+    Hello?
+    <BLANKLINE>
+    my name is.
+    <BLANKLINE>
+    Malek:
+    <BLANKLINE>
+    yoo
+
+case 3 - space at the start:
+
+      >>> text_indentation("   malek.salem:love?")
+      malek.
+      <BLANKLINE>
+      salem:
+      <BLANKLINE>
+      love?
+      <BLANKLINE>
+
+
+case 3 - space at the end:
+
+      >>> text_indentation("malek.salem:love?     ")
+      malek.
+      <BLANKLINE>
+      salem:
+      <BLANKLINE>
+      love?
+      <BLANKLINE>
