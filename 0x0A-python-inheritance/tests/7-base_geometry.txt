@@ -1,0 +1,32 @@
+Module ``Base Geometry``
+========================
+Using ``BaseGeometry``
+------------------------
+
+Import BaseGeometry class
+
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+CASE 0 - raise an exception from the area() method
+
+    >>> bg = BaseGeometry()
+    >>> bg.area()
+    Traceback (most recent call last):
+        ...
+    Exception: area() is not implemented
+
+CASE 1 - raise ValueError
+
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator(None, 1, 1)
+    Traceback (most recent call last):
+        ...
+    TypeError: integer_validator() takes 3 positional arguments but 4 were given
+
+CASE 2 - raise a TypeError exception
+
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator(None, "lalala")
+    Traceback (most recent call last):
+        ...
+    TypeError: Integer must be an integer
