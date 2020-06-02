@@ -1,0 +1,12 @@
+#!/usr/bin/python3
+
+
+def is_same_class(obj, a_class):
+    ''' check if is an istance
+
+    Returns:
+        True: if the object is exactly an instance of the specified class
+        False: otherwise
+
+    '''
+    return isinstance(type(obj), a_class)
