@@ -1,0 +1,39 @@
+The ``MyList`` module
+=======================
+
+Using ``print_sorted``
+-----------------------
+
+
+Import `print_sorted` from `1-my_list`
+
+    >>> MyList = __import__('1-my_list').MyList
+
+
+CASE 0 - create successfull instance of MyList
+
+    >>> lst = MyList()
+    >>> isinstance(lst, MyList)
+    True
+
+CASE 0.1 - create successfull type of MyList
+
+    >>> lst = MyList()
+    >>> type(lst) ==  MyList
+    True
+
+CASE 1 - method should appear when using dict
+    >>> type(MyList.__dict__['print_sorted'])
+    <class 'function'>
+
+
+CASE2 - append to list and test method
+
+    >>> lst = MyList()
+    >>> lst.append(4)
+    >>> lst.append(3)
+    >>> lst.append(1)
+    >>> lst.append(5)
+    >>> lst.append(2)
+    >>> lst.print_sorted()
+    [1, 2, 3, 4, 5]
