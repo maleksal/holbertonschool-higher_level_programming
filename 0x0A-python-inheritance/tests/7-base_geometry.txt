@@ -22,3 +22,10 @@ CASE 2 - raise a TypeError exception
     Traceback (most recent call last):
         ...
     TypeError: Integer must be an integer
+
+CASE 3 - pass empty params
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator()
+    Traceback (most recent call last):
+        ...
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
