@@ -27,5 +27,3 @@ def pascal_triangle(n):
         new_list = pascal_calculation(matrix[-1])
         matrix.append(new_list)
     return matrix
-
-print(pascal_triangle(5))
