@@ -22,7 +22,8 @@ def pascal_calculation(my_list):
 def pascal_triangle(n):
     ''' returns a list of lists of integers representing Pascal’s triangle '''
     matrix = [[1]]
-
+    if n <= 0:
+        return []
     for i in range(n - 1):
         new_list = pascal_calculation(matrix[-1])
         matrix.append(new_list)
