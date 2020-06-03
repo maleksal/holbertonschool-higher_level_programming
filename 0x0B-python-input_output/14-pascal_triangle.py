@@ -15,12 +15,12 @@ def pascal_calculation(my_list):
 
     # append last element
     new.append(my_list[-1])
-    
+
     return new
 
 
 def pascal_triangle(n):
-    ''' returns a list of lists of integers representing the Pascal’s triangle '''
+    ''' returns a list of lists of integers representing Pascal’s triangle '''
     matrix = [[1]]
 
     for i in range(n - 1):
