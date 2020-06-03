@@ -7,8 +7,5 @@ def save_to_json_file(my_obj, filename):
 
     import json
 
-    # Serialize object
-    serializer = json.dumps(my_obj)
-    # write to file
     with open(filename, 'w+') as file:
-        file.write(serializer)
+        file.write(json.dumps(my_obj))
