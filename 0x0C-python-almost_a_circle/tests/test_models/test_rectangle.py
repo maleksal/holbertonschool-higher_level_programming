@@ -58,6 +58,7 @@ class TestRectangleClass(unittest.TestCase):
         self.assertEqual(a.area(), 6)
 
     def test_case_8(self):
+        """ test with valid inputs """
         capturedOutput = StringIO()
         sys.stdout = capturedOutput
 
@@ -65,4 +66,15 @@ class TestRectangleClass(unittest.TestCase):
         a.display()
         sys.stdout = sys.__stdout__
         valid_output = '####\n####\n'
+        self.assertEqual(valid_output, capturedOutput.getvalue())
+
+    def test_case_9(self):
+        """ test with valid inputs """
+        capturedOutput = StringIO()
+        sys.stdout = capturedOutput
+
+        a = Rectangle(4, 2, 1, 1)
+        a.display()
+        sys.stdout = sys.__stdout__
+        valid_output = '\n ####\n ####\n'
         self.assertEqual(valid_output, capturedOutput.getvalue())
