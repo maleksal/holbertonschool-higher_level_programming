@@ -78,3 +78,29 @@ class TestRectangleClass(unittest.TestCase):
         sys.stdout = sys.__stdout__
         valid_output = '\n ####\n ####\n'
         self.assertEqual(valid_output, capturedOutput.getvalue())
+
+    def test_case_10(self):
+        ''' test update method '''
+        capturedOutput = StringIO()
+        sys.stdout = capturedOutput
+
+        a = Rectangle(1, 1)
+        a.update(89, 2, 3, 4, 5)
+        print(a, end="")
+
+        sys.stdout = sys.__stdout__
+        valid_output = '[Rectangle] (89) 4/5 - 2/3'
+        self.assertEqual(valid_output, capturedOutput.getvalue())
+
+    def test_case_11(self):
+        ''' test update method with kwargs '''
+        capturedOutput = StringIO()
+        sys.stdout = capturedOutput
+
+        a = Rectangle(1, 1)
+        a.update(id=89, width=2, height=3, x=4, y=5)
+        print(a, end="")
+
+        sys.stdout = sys.__stdout__
+        valid_output = '[Rectangle] (89) 4/5 - 2/3'
+        self.assertEqual(valid_output, capturedOutput.getvalue())
