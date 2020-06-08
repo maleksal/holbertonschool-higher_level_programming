@@ -49,3 +49,9 @@ class TestRectangleClass(unittest.TestCase):
         """ test when passing no args """
         with self.assertRaises(TypeError):
             a = Rectangle()
+    
+    def test_case_7(self):
+        """ test the Rectangle area method """
+        a = Rectangle(2, 3) # test with valid inputs
+        self.assertEqual(a.area(), 6)
+
