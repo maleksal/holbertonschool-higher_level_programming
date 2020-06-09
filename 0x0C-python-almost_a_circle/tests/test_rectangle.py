@@ -13,7 +13,7 @@ class TestRectangleClass(unittest.TestCase):
         """ test id from the inherted class """
 
         a = Rectangle(1, 1)
-        self.assertEqual(a.id, 1)
+        self.assertEqual(a.id, 3)
 
     def test_case_2(self):
         """ test setter for width """
