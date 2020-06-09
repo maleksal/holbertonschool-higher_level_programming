@@ -47,5 +47,5 @@ class Base(object):
     def create(cls, **dictionary):
         """ returns an instance with all attributes already set """
         temporary = cls(1, 1)
-        temporary.update(**dictionary)
+        temporary.cls.update(**dictionary)
         return temporary
