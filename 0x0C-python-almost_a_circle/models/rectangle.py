@@ -8,6 +8,7 @@ class Rectangle(Base):
     ''' Rectangle class '''
 
     def __init__(self, width, height, x=0, y=0, id=None):
+        ''' class constructor '''
         super().__init__(id)
 
         self.width = width
@@ -17,6 +18,7 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        ''' getter for width '''
         return self.__width
 
     @width.setter
@@ -30,6 +32,7 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        ''' getter for height '''
         return self.__height
 
     @height.setter
@@ -43,6 +46,7 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        ''' getter for x '''
         return self.__x
 
     @x.setter
@@ -56,6 +60,7 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        ''' getter for y '''
         return self.__y
 
     @y.setter
@@ -68,9 +73,11 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        ''' calculates area '''
         return self.__width * self.__height
 
     def display(self):
+        ''' displays # on stdout '''
         if self.__y != 0:
             print('\n' * self.__y, end="")
         for i in range(self.__height):
@@ -78,6 +85,7 @@ class Rectangle(Base):
             print('#' * self.__width)
 
     def update(self, *args, **kwargs):
+        ''' updates class attributes '''
         property_names = ["id", "width", "height", "x", "y"]
         if len(args) > 1:
             for i in range(len(args)):
@@ -87,5 +95,6 @@ class Rectangle(Base):
                 setattr(self, key, value)
 
     def __str__(self):
+        ''' represents class '''
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.__x, self.__y, self.__width, self.__height)
