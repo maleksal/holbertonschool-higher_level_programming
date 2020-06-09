@@ -87,7 +87,7 @@ class Rectangle(Base):
     def update(self, *args, **kwargs):
         ''' updates class attributes '''
         property_names = ["id", "width", "height", "x", "y"]
-        if len(args) > 1:
+        if len(args) >= 1:
             for i in range(len(args)):
                 setattr(self, property_names[i], args[i])
         else:
