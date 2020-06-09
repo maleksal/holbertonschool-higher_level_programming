@@ -104,3 +104,6 @@ class TestRectangleClass(unittest.TestCase):
         sys.stdout = sys.__stdout__
         valid_output = '[Rectangle] (89) 4/5 - 2/3'
         self.assertEqual(valid_output, capturedOutput.getvalue())
+
+if __name__ == '__main__':
+    unittest.main()
