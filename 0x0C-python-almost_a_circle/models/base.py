@@ -42,3 +42,10 @@ class Base(object):
         if json_string is None:
             return []
         return json.loads(json_string)
+
+    @staticmethod
+    def create(cls, **dictionary):
+        """ returns an instance with all attributes already set """
+        temporary = cls(1, 1)
+        temporary.update(**dictionary)
+        return temporary
