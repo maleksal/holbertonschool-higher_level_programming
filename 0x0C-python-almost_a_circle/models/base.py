@@ -58,7 +58,7 @@ class Base(object):
         """ returns a list of instances """
         import os
 
-        filename = "{}.json".format(cls.__name_)
+        filename = "{}.json".format(cls.__name__)
         main_list = []
 
         if not os.path.exists(filename):
@@ -67,3 +67,4 @@ class Base(object):
             lists = cls.from_json_string(file.read())
         for i in lists:
             main_list.append(cls.create(**i))
+        return main_list
