@@ -46,6 +46,9 @@ class Base(object):
     @staticmethod
     def create(cls, **dictionary):
         """ returns an instance with all attributes already set """
-        temporary = cls(1, 1)
-        temporary.cls.update(**dictionary)
+        if cls.__name__ == 'Rectangle':
+            temporary = cls(1, 1)
+        else:
+            temporary = cls(1)
+        temporary.update(**dictionary)
         return temporary
