@@ -68,3 +68,34 @@ class Base(object):
         for i in lists:
             main_list.append(cls.create(**i))
         return main_list
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        import turtle
+
+        def draw_square(size):
+            t = turtle.Turtle()
+            t.forward(size)
+            t.left(90)
+            t.forward(size)
+            t.left(90)
+            t.forward(size)
+            t.left(90)
+            t.forward(size)
+            t.left(90)
+
+        def draw_rectangle(width, height):
+            t = turtle.Turtle()
+            t.forward(width)
+            t.left(90)
+            t.forward(height)
+            t.left(90)
+            t.forward(width)
+            t.left(90)
+            t.forward(height)
+            t.left(90)
+
+        for i in list_rectangles:
+            draw_rectangle(i.width, i.height)
+        for i in list_squares:
+            draw_square(i.size)
