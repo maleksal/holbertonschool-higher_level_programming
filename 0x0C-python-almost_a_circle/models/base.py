@@ -71,6 +71,7 @@ class Base(object):
 
     @staticmethod
     def draw(list_rectangles, list_squares):
+        ''' draw rectongle and square using turtle '''
         import turtle
 
         def draw_square(size):
