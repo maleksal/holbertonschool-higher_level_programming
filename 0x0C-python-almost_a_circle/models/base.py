@@ -52,3 +52,18 @@ class Base(object):
             temporary = cls(1)
         temporary.update(**dictionary)
         return temporary
+
+    @classmethod
+    def load_from_file(cls):
+        """ returns a list of instances """
+        import os
+
+        filename = "{}.json".format(cls.__name_)
+        main_list = []
+
+        if not os.path.exists(filename):
+            return []
+        with open(filename, 'r') as file:
+            lists = cls.from_json_string(file.read())
+        for i in lists:
+            main_list.append(cls.create(**i))
