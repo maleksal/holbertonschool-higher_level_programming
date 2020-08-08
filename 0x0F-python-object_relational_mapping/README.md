@@ -1,8 +1,5 @@
 # 0x0F. Python - Object-relational mapping
 
-
-Foobar is a Python library for dealing with word pluralization.
-
 ## Background Context
 In this project, you will link two amazing worlds: Databases and Python!
 
@@ -41,7 +38,7 @@ The biggest difficulty with ORM is: The syntax!
 
 Indeed, all of them have the same type of syntax, but not always. Please read tutorials and don’t read the entire documentation before starting, just jump on it if you don’t get something.
 
-# More info
+## More info
 Install ```MySQLdb``` module version ```1.3.x```
 For installing MySQLdb, you need to have MySQL installed: 
 -> GOOGLE IT: How to install MySQL 5.7 in Ubuntu 14.04
