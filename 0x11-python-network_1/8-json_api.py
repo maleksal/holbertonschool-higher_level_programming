@@ -6,7 +6,7 @@ if __name__ == "__main__":
     import requests
     import sys
 
-    url = " http://c0a6ac671e05.9790342a.hbtn-cod.io:5000/search_user"
+    url = " http://0.0.0.0:5000/search_user"
 
     # take argument
     data = {"q": sys.argv[1] if len(sys.argv) > 1 else ""}
