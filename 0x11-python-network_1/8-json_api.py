@@ -13,10 +13,10 @@ if __name__ == "__main__":
     response = requests.post(url, data=data)
 
     try:
-        if not response.json():
+        api_r = response.json()
+        if not api_r:
             print("No result")
         else:
-            api_r = response.json()
             print("[{}] {}".format(api_r.get("id"), api_r.get("name")))
     except ValueError:
             print("Not a valid JSON")
