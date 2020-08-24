@@ -12,11 +12,11 @@ if __name__ == "__main__":
     data = {"q": sys.argv[1] if len(sys.argv) > 1 else ""}
     response = requests.post(url, data=data)
 
-    if not response.json():
-        print("No Result")
-    else:
-        api_response = response.json()
-        try:
-            print("[{}] {}".format(api_response["id"], api_response["name"]))
-        except (IndexError, KeyError, TypeError):
+    try:
+        if not response.json():
+            print("No Result")
+        else:
+            api_r = response.json()
+            print("[{}] {}".format(api_r.get("id"), api_r.get("name")))
+    except ValueError:
             print("Not a Valid JSON")
