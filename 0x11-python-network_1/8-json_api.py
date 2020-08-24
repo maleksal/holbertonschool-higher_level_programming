@@ -6,18 +6,17 @@ if __name__ == "__main__":
     import requests
     import sys
 
-    url = "http://0.0.0.0:5000/search_user"
-    # take argument
-    arg = sys.argv[1]
+    url = " http://0.0.0.0:5000/search_user"
 
-    if not arg:
-        arg = ""
-    response = requests.post(url, {"q": arg})
+    # take argument
+    data = {"q": sys.argv[1] if len(sys.argv) > 1 else ""}
+    response = requests.post(url, params=data)
 
     if not response.json():
         print("No Result")
     else:
+        api_response = response.json()
         try:
-            print("[{}] {}".format(api_respoonse["id"], api_respoonse["name"]))
+            print("[{}] {}".format(api_response["id"], api_response["name"]))
         except (IndexError, KeyError, TypeError):
             print("Not a Valid JSON")
