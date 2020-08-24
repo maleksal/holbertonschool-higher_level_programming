@@ -14,14 +14,10 @@ if __name__ == "__main__":
         arg = ""
     response = requests.post(url, {"q": arg})
 
-    try:
-        api_respoonse = response.json()
-    except ValueError:
-        # no JSON returned
-        print("Not a Valid JSON")
-
-    if api_respoonse:
+    if not response.json():
+        print("No Result")
+    else:
         try:
             print("[{}] {}".format(api_respoonse["id"], api_respoonse["name"]))
         except (IndexError, KeyError, TypeError):
-            print("No Result")
+            print("Not a Valid JSON")
