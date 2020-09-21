@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-const dictionary = module.require('./test.js').dict;
+const dictionary = module.require('./101-data.js').dict;
 const newDic = {};
 
 for (const key in dictionary) {
